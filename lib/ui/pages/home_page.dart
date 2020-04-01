@@ -218,7 +218,7 @@ class _HomePageState extends State<HomePage>
                   ),
                 ),
               )),
-          Positioned(
+          if (_searchFocus.hasFocus)Positioned(
             top: _animator.progressYTranslation.value,
             left: 0,
             right: 0,
