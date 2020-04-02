@@ -1,16 +1,8 @@
-# multiple_animations
+# Flutter Dribble Aniamtion
 
-A new Flutter project.
+A Flutter UI kit made with designs from Dribble. https://dribbble.com/shots/7517982-Estudio-Mobile-App-UI-Kit-I
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+### [E-Learning Animation](https://dribbble.com/shots/7517982-Estudio-Mobile-App-UI-Kit-I)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![device-2020-04-02-170921.png](https://github.com/KumarSunil17/Dribble_Animation/blob/master/screenshot/device-2020-04-02-170921.png)
