@@ -72,7 +72,6 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return WillPopScope(
       onWillPop: () {
         if (_controller.isDismissed) {
