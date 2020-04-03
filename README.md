@@ -1,4 +1,4 @@
-# Flutter Dribble Aniamtion
+# Flutter Dribble Animation
 
 A Flutter UI kit made with designs from Dribble. https://dribbble.com/shots/7517982-Estudio-Mobile-App-UI-Kit-I
 
