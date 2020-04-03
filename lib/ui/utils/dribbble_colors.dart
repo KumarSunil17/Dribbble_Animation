@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-class DribbleColors{
+class DribbbleColors {
   static const Color background = Color(0xFFF4F4FA);
   static const Color button = Color(0xFF5568FF);
   static const Color title = Color(0xFF3F495A);

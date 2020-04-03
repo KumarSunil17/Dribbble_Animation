@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage>
         builder: (ctx, child) => Scaffold(
           key: _scaffoldKey,
           resizeToAvoidBottomInset: true,
-          backgroundColor: DribbleColors.background,
+          backgroundColor: DribbbleColors.background,
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
                 color: Colors.white,
@@ -133,13 +133,13 @@ class _HomePageState extends State<HomePage>
                       text: 'Hi, Antonio',
                       style: TextStyle(
                           fontSize: 26,
-                          color: DribbleColors.title,
+                          color: DribbbleColors.title,
                           fontWeight: FontWeight.w700),
                     ),
                     TextSpan(
                       text: '\nWhat would like to learn\ntoday? Search below.',
                       style: TextStyle(
-                          fontSize: 16, color: DribbleColors.subtitle),
+                          fontSize: 16, color: DribbbleColors.subtitle),
                     )
                   ]),
                 ),
@@ -157,7 +157,7 @@ class _HomePageState extends State<HomePage>
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 18,
-                          color: DribbleColors.title,
+                          color: DribbbleColors.title,
                           fontWeight: FontWeight.w600)),
                 ),
               ),
@@ -185,20 +185,20 @@ class _HomePageState extends State<HomePage>
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: 18,
-                                    color: DribbleColors.title,
+                                    color: DribbbleColors.title,
                                     fontWeight: FontWeight.w600),
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
                                   hintText: 'Looking for ...',
                                   hintStyle: TextStyle(
                                       fontSize: 16,
-                                      color: DribbleColors.hintColor,
+                                      color: DribbbleColors.hintColor,
                                       fontWeight: FontWeight.w600),
                                   contentPadding:
                                       const EdgeInsets.only(left: 48),
                                 )),
                           ),
-                          DribbleSearchButton(() {
+                          DribbbleSearchButton(() {
                             String query =
                                 _searchController.text.toString().trim();
                             if (query.isNotEmpty) {
@@ -228,7 +228,7 @@ class _HomePageState extends State<HomePage>
                     height: _animator.progressSize.value,
                     width: _animator.progressSize.value,
                     child: Center(
-                        child: DribbleProgress(
+                        child: DribbbleProgress(
                             strokeWidth: 6,
                             color: Theme.of(context).primaryColor)),
                   ),
@@ -252,7 +252,7 @@ class _HomePageState extends State<HomePage>
                           style: TextStyle(
                               fontSize: 14,
                               letterSpacing: 1.3,
-                              color: DribbleColors.title,
+                              color: DribbbleColors.title,
                               fontWeight: FontWeight.w700),
                         ),
                       ),
@@ -304,7 +304,7 @@ class _HomePageState extends State<HomePage>
                                         fontWeight: FontWeight.w800,
                                         letterSpacing: 1,
                                         color: _page == 0
-                                            ? DribbleColors.title
+                                            ? DribbbleColors.title
                                             : Colors.grey))),
                           ),
                         ),
@@ -336,7 +336,7 @@ class _HomePageState extends State<HomePage>
                                         fontWeight: FontWeight.w800,
                                         letterSpacing: 1,
                                         color: _page == 1
-                                            ? DribbleColors.title
+                                            ? DribbbleColors.title
                                             : Colors.grey))),
                           ),
                         ),

@@ -38,7 +38,7 @@ class SearchedCourseCard extends StatelessWidget {
                     maxLines: 2,
                     style: TextStyle(
                         fontSize: 18,
-                        color: DribbleColors.title,
+                        color: DribbbleColors.title,
                         fontWeight: FontWeight.w700),
                   ),
                   SizedBox(

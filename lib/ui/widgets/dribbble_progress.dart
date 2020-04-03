@@ -3,20 +3,20 @@ import 'dart:math' as Math;
 
 const kProgressBarSize = Size(60, 60);
 
-class DribbleProgress extends StatefulWidget {
+class DribbbleProgress extends StatefulWidget {
   final Color color;
   final double strokeWidth;
-  const DribbleProgress({
+  const DribbbleProgress({
     Key key,
     this.strokeWidth,
     @required this.color,
   }) : super(key: key);
 
   @override
-  _DribbleProgressState createState() => _DribbleProgressState();
+  _DribbbleProgressState createState() => _DribbbleProgressState();
 }
 
-class _DribbleProgressState extends State<DribbleProgress>
+class _DribbbleProgressState extends State<DribbbleProgress>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
 
