@@ -3,8 +3,8 @@ import 'package:multiple_animations/models/course_model.dart';
 import 'package:multiple_animations/ui/animations/dribble_animator.dart';
 import 'package:multiple_animations/ui/utils/dribble_colors.dart';
 import 'package:multiple_animations/ui/widgets/course_card.dart';
-import 'package:multiple_animations/ui/widgets/dribble_button.dart';
 import 'package:multiple_animations/ui/widgets/dribble_progress.dart';
+import 'package:multiple_animations/ui/widgets/dribble_search_button.dart';
 import 'package:multiple_animations/ui/widgets/search_course_card.dart';
 
 class HomePage extends StatefulWidget {
