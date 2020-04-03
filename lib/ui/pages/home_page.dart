@@ -282,65 +282,13 @@ class _HomePageState extends State<HomePage>
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Material(
-                        shadowColor: Colors.grey.withOpacity(0.4),
-                        color: Colors.white,
-                        elevation: _page == 0 ? 6 : 0,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.horizontal(
-                                left: Radius.circular(30))),
-                        child: InkWell(
-                          onTap: () {
-                            _changePage(0);
-                          },
-                          borderRadius: BorderRadius.horizontal(
-                              left: Radius.circular(30)),
-                          child: SizedBox(
-                            height: 40,
-                            width: MediaQuery.of(context).size.width / 3,
-                            child: Center(
-                                child: Text('COURSES',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w800,
-                                        letterSpacing: 1,
-                                        color: _page == 0
-                                            ? DribbbleColors.title
-                                            : Colors.grey))),
-                          ),
-                        ),
-                      ),
+                      _buildTab(0, 'COURSES'),
                       Container(
                         height: 40,
                         width: 1,
                         color: Colors.black12,
                       ),
-                      Material(
-                        shadowColor: Colors.grey.withOpacity(0.4),
-                        color: Colors.white,
-                        elevation: _page == 1 ? 6 : 0,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.horizontal(
-                                right: Radius.circular(30))),
-                        child: InkWell(
-                          onTap: () {
-                            _changePage(1);
-                          },
-                          borderRadius: BorderRadius.horizontal(
-                              right: Radius.circular(30)),
-                          child: SizedBox(
-                            height: 40,
-                            width: MediaQuery.of(context).size.width / 3,
-                            child: Center(
-                                child: Text('PUBLIC',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w800,
-                                        letterSpacing: 1,
-                                        color: _page == 1
-                                            ? DribbbleColors.title
-                                            : Colors.grey))),
-                          ),
-                        ),
-                      ),
+                      _buildTab(1, 'PEOPLE')
                     ],
                   ),
                 ),
@@ -364,6 +312,34 @@ class _HomePageState extends State<HomePage>
               ),
             )
           ]),
+        ),
+      ),
+    );
+  }
+
+  _buildTab(int index, String text) {
+    return Material(
+      shadowColor: Colors.grey.withOpacity(0.4),
+      color: Colors.white,
+      elevation: _page == index ? 6 : 0,
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.horizontal(right: Radius.circular(30))),
+      child: InkWell(
+        onTap: () {
+          _changePage(1);
+        },
+        borderRadius: BorderRadius.horizontal(right: Radius.circular(30)),
+        child: SizedBox(
+          height: 40,
+          width: MediaQuery.of(context).size.width / 3,
+          child: Center(
+              child: Text(text,
+                  style: TextStyle(
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 1,
+                      color: _page == index
+                          ? DribbbleColors.title
+                          : Colors.grey))),
         ),
       ),
     );
