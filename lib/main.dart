@@ -8,12 +8,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,
-      title: 'E-Commerce',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,primaryColor: Color(0xFF5568FF)
-      ),
-      home: HomePage()
-    );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'E-Commerce',
+        theme: ThemeData(
+            primarySwatch: Colors.blue, primaryColor: Color(0xFF5568FF)),
+        home: HomePage());
   }
 }
