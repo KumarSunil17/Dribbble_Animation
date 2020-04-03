@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:multiple_animations/models/course_model.dart';
-import 'package:multiple_animations/ui/utils/dribble_colors.dart';
+import 'package:multiple_animations/ui/utils/dribbble_colors.dart';
 
 class SearchedCourseCard extends StatelessWidget {
   final Course course;
