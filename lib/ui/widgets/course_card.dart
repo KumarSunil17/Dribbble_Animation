@@ -25,7 +25,7 @@ class CourseCard extends StatelessWidget {
               flex: 3,
               child: FadeInImage.assetNetwork(
                 placeholder: 'assets/placeholder.jpg',
-                image: course.imageUrl,
+                image: course.imageUrl!,
                 fit: BoxFit.cover,
                 width: double.infinity,
               ),
@@ -39,7 +39,7 @@ class CourseCard extends StatelessWidget {
                   children: <Widget>[
                     SizedBox(height: 8),
                     Text(
-                      course.category,
+                      course.category!,
                       style: TextStyle(
                           fontSize: 12,
                           color: Theme.of(context).primaryColor,
@@ -50,7 +50,7 @@ class CourseCard extends StatelessWidget {
                         width: cardSize.width / 2,
                         child: Center(
                           child: Text(
-                            course.title,
+                            course.title!,
                             maxLines: 2,
                             style: TextStyle(
                                 fontSize: 20,
@@ -72,7 +72,7 @@ class CourseCard extends StatelessWidget {
                           lineHeight: 8,
                           backgroundColor: Colors.black12,
                           percent:
-                              course.completedLessons / course.totalEpisodes,
+                              course.completedLessons! / course.totalEpisodes!,
                           progressColor: Colors.greenAccent,
                         ),
                       ],

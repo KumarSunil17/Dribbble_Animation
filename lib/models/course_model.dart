@@ -1,9 +1,9 @@
 class Course {
-  String category;
-  String title;
-  int totalEpisodes;
-  int completedLessons;
-  String imageUrl;
+  String? category;
+  String? title;
+  int? totalEpisodes;
+  int? completedLessons;
+  String? imageUrl;
 
   Course(
       {this.category,

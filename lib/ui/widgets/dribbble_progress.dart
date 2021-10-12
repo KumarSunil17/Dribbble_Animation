@@ -7,9 +7,9 @@ class DribbbleProgress extends StatefulWidget {
   final Color color;
   final double strokeWidth;
   const DribbbleProgress({
-    Key key,
-    this.strokeWidth,
-    @required this.color,
+    Key? key,
+    required this.strokeWidth,
+    required this.color,
   }) : super(key: key);
 
   @override
@@ -18,7 +18,7 @@ class DribbbleProgress extends StatefulWidget {
 
 class _DribbbleProgressState extends State<DribbbleProgress>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -65,9 +65,9 @@ class CircleProgressBarPainter extends CustomPainter {
   final Color color;
 
   CircleProgressBarPainter({
-    @required this.color,
-    @required this.percentage,
-    double strokeWidth,
+    required this.color,
+    required this.percentage,
+    double strokeWidth = 6,
   }) : this.strokeWidth = strokeWidth ?? 6;
 
   @override

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class LinearPercentIndicator extends StatelessWidget {
   final double percent;
-  final double width;
+  final double? width;
   final double lineHeight;
   final Color fillColor;
   final Color backgroundColor;
-  final Color progressColor;
+  final Color? progressColor;
   final EdgeInsets padding;
   LinearPercentIndicator({
-    Key key,
+    Key? key,
     this.fillColor = Colors.transparent,
     this.percent = 0.0,
     this.lineHeight = 5.0,
@@ -25,7 +25,7 @@ class LinearPercentIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var items = List<Widget>();
+    List<Widget> items = [];
     final hasSetWidth = width != null;
     var containerWidget = Container(
       width: hasSetWidth ? width : double.infinity,
@@ -34,7 +34,7 @@ class LinearPercentIndicator extends StatelessWidget {
       child: CustomPaint(
         painter: LinearPainter(
           progress: percent,
-          progressColor: progressColor,
+          progressColor: progressColor!,
           backgroundColor: backgroundColor,
           lineWidth: lineHeight,
         ),
@@ -72,8 +72,8 @@ class LinearPainter extends CustomPainter {
   LinearPainter({
     this.lineWidth,
     this.progress,
-    this.progressColor,
-    this.backgroundColor,
+    required this.progressColor,
+    required this.backgroundColor,
   }) {
     _paintBackground.color = backgroundColor;
     _paintBackground.style = PaintingStyle.stroke;
