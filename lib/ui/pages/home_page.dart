@@ -18,11 +18,11 @@ class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
   final FocusNode _searchFocus = FocusNode();
-  TextEditingController _searchController;
-  AnimationController _controller;
-  DribbleAnimator _animator;
+  late TextEditingController _searchController;
+  late AnimationController _controller;
+  late DribbleAnimator _animator;
   List<Course> _searchedCourses = [];
-  PageController _pageController;
+  late PageController _pageController;
   int _page = 0;
   @override
   void initState() {
@@ -37,8 +37,8 @@ class _HomePageState extends State<HomePage>
           setState(() {
             _searchedCourses = courses
                 .where((element) =>
-                    element.category.toLowerCase().contains(text) ||
-                    element.title.toLowerCase().contains(text))
+                    element.category!.toLowerCase().contains(text) ||
+                    element.title!.toLowerCase().contains(text))
                 .toList();
           });
       });
@@ -110,11 +110,11 @@ class _HomePageState extends State<HomePage>
                 unselectedItemColor: Colors.black87,
                 items: [
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.home), title: Text('Home')),
+                      icon: Icon(Icons.home), label: 'Home'),
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.book), title: Text('Courses')),
+                      icon: Icon(Icons.book), label: 'Courses'),
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.person), title: Text('Profile')),
+                      icon: Icon(Icons.person), label: 'Profile'),
                 ],
               ),
             ),
@@ -205,7 +205,7 @@ class _HomePageState extends State<HomePage>
                               _searchFocus.unfocus();
                               _controller.forward();
                             } else {
-                              _scaffoldKey.currentState.showSnackBar(SnackBar(
+                              _scaffoldKey.currentState?.showSnackBar(SnackBar(
                                 content: Text('Enter what you want to search.'),
                                 behavior: SnackBarBehavior.floating,
                               ));

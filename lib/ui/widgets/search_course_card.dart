@@ -23,7 +23,7 @@ class SearchedCourseCard extends StatelessWidget {
               height: 140,
               child: FadeInImage.assetNetwork(
                 placeholder: 'assets/placeholder.jpg',
-                image: course.imageUrl,
+                image: course.imageUrl!,
                 fit: BoxFit.cover,
                 width: double.infinity,
               ),
@@ -34,7 +34,7 @@ class SearchedCourseCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    course.title,
+                    course.title ?? "",
                     maxLines: 2,
                     style: TextStyle(
                         fontSize: 18,
